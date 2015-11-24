@@ -1,0 +1,1205 @@
+html, body, button, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+    margin: 0
+    padding: 0
+    border: none
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+    display: block
+
+body 
+    line-height: 1
+
+ol, ul 
+    list-style: none
+    list-style-type: none
+
+blockquote, q 
+    quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+    content: ''
+    content: none
+
+table 
+    border-collapse: collapse
+    border-spacing: 0
+
+button, input
+    border: none
+    outline: none
+
+button:focus
+    outline: none
+a
+    text-decoration: none
+    
+.clearfix:after
+    content: ''
+    display: table
+    overflow: hidden
+    clear: both
+
+$bg_section: #22262a
+$bg_section_light: #fff
+
+$bg_brown: #4b3c2e
+$bg_brown_light: #cebdb2
+
+$bg_footer_dark: #1c1e22
+$bg_footer_light: #f2f2f2
+
+$text_dark: #fff
+$text_light: #595959
+
+$text_dark2: #b3b3b3
+$text_light2: #5f5f5f
+
+$bg_item_dark: #2c3035
+$bg_item_light: #f4f4f4
+
+body
+    font-family: Roboto
+    overflow: hidden
+    overflow-y: scroll
+
+::selection
+	background-color: #a4ce21
+	color: white
+
+// --------------------------------------------------------------------------------------------
+// -----------------------H-E-A-D
+// --------------------------------------------------------------------------------------------
+
+.head
+    padding: 50px 0
+
+    width: 100%
+
+    background: $bg_section
+
+.wrap
+    position: relative
+
+    max-width: 940px
+    margin: 0 auto
+
+.head__ico
+    margin-right: 12px
+
+    vertical-align: middle
+    
+.head__title
+    color: $text_dark
+    font-size: 24px
+    line-height: 24px
+    vertical-align: middle
+    
+.head__nav__main
+    display: inline-block
+    vertical-align: bottom
+    position: absolute
+    bottom: 0
+    right: 0 
+
+.head__nav
+    display: inline-block
+
+    vertical-align: bottom
+    transition: all 0.5s ease
+
+.checkbox
+    display: none
+
+.head__nav__li
+    display: inline-block
+    
+.head__nav__item
+    padding-left: 30px
+
+    font-size: 16px
+    line-height: 20px
+    color: $text_dark
+    text-decoration: none
+
+    cursor: pointer
+    transition: all 0.5s ease
+    
+.head__nav__item:hover
+    color: #97c248
+
+#head__nav__main__menu__checkbox:checked + .head__nav
+    transform: translateY(0)
+
+#head__nav__main__ico--search:checked + .head__nav__main__input--search
+    width: 100px
+
+    margin-left: 30px
+
+    opacity: 1
+    visibility: visible
+
+.head__nav__main__ico--menu
+    display: none
+
+.head__nav__main__input--search
+    position: relative
+    top: -1px
+
+    width: 0
+    height: 20px
+    
+    padding-left: 5px
+    margin-left: -6px
+
+    outline: none
+    border: none
+    
+    opacity: 0
+    visibility: hidden
+    
+    background-color: $text_dark
+    transition: all 1s ease
+    color: $text_light
+
+@media screen and (max-width: 1004px)
+    .head__nav__main
+        margin-right: 20px
+
+    .wrap
+        margin: 0 24px
+    
+    .head__nav__item
+        margin-top: 10px
+        padding: 0 6px 0 0
+
+    #head__nav__main__ico--search:checked + .head__nav__main__input--search
+        margin-left: 5px
+
+@media screen and (max-width: 770px)
+    .head
+        padding: 40px 0
+
+    .head__nav__main
+        position: relative
+        display: block
+ 
+@media screen and (max-width: 618px)
+    .head
+        position: relative
+
+    .wrap
+        position: static
+
+    .head__nav
+        position: absolute
+        top: 0 
+        left: 0
+
+        transform: translateY(-20px)
+
+        width: 100%
+
+        text-align: center
+        background: $bg_brown
+            
+    .head__nav__item
+        color: $bg_section
+        font-weight: 600
+
+    .head__nav__item:hover
+        color: $text_dark
+
+    .fa-bars, .fa-search
+        color: $text_dark
+
+    .fa-bars:hover, .fa-search:hover
+        color: #a4ce21
+
+    .head__nav__main__ico--menu
+        display: inline-block
+
+        vertical-align: top
+
+    .head__nav__main
+        position: static
+        float: right
+        margin: -7px 0 0 0
+
+// --------------------------------------------------------------------------------------------
+// -----------------------S-L-I-D-E-R
+// --------------------------------------------------------------------------------------------
+
+.slider
+    position: relative
+    background-color: $bg_brown
+    
+.slider__wrap
+    padding: 19% 0
+    background: url(../pic/slider_bg.png) no-repeat 100% 100%
+
+.slider__left
+    position: absolute
+    left: 1%
+    top: 50%
+
+    margin: -12.5px 0 0 0
+
+    cursor: pointer
+
+.slider__right
+    position: absolute
+    right: 1%
+    top: 50%
+
+    margin: -12.5px 0 0 0
+
+    cursor: pointer
+
+.slider__title
+    color: $text_dark
+    font-size: 60px
+    font-weight: 300
+
+.slider__text
+    font-size: 40px
+    color: $text_dark
+    font-weight: 500
+
+@media screen and (max-width: 1160px)
+    .slider__wrap
+        background-size: contain
+        padding-left: 10px
+
+@media screen and (max-width: 820px)
+    .slider__title
+        font-size: 50px
+
+    .slider__text
+        font-size: 30px
+        padding-top: 2%
+
+@media screen and (max-width: 650px)
+    .slider__title
+        font-size: 40px
+
+    .slider__text
+        font-size: 20px
+        line-height: 24px
+
+
+@media screen and (max-width: 545px)
+    .slider__wrap
+        padding-right: 40%
+
+// --------------------------------------------------------------------------------------------
+// -----------------------S-E-R-V-I-C-E-S
+// --------------------------------------------------------------------------------------------
+
+.services
+    width: 100%
+    
+    background: $bg_section
+    text-align: center
+    font-size: 0
+
+.services__title
+    padding: 5.34% 0
+
+    color: $text_dark
+    font-size: 36px
+    font-weight: 300
+    text-align: center
+
+.services__container
+    margin: 0 -31 / 940 * 100%
+
+.services__item
+    display: inline-block
+
+    max-width: 182px
+    
+    margin: 0 31 / 940 * 100% 65px
+    
+.services__item__cont
+    width: 100px
+    height: 100px
+
+    margin: 0 auto
+
+    background-color: $bg_item_dark
+    border-radius: 100%
+
+.services__img
+    padding-top: 50%
+    margin-top: -16px
+
+.services__item__title
+    font-size: 24px
+    font-weight: 300
+    color: $text_dark
+    line-height: 70px
+
+.services__item__text
+    color: $text_dark2
+    font-family: Arial
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+
+// --------------------------------------------------------------------------------------------
+// -----------------------A-S-K
+// --------------------------------------------------------------------------------------------
+
+.ask
+    width: 100%
+
+    padding: 16.5% 0
+    box-sizing: border-box
+
+    background-color: $bg_brown
+
+.ask__title
+    @extend .slider__title
+    padding-bottom: 3%
+
+.ask__btn
+    display: inline-block
+
+    width: 131px
+    height: 43px
+
+    margin-right: 1%
+
+    border-radius: 5px
+
+    background-color: #a4ce21
+    box-shadow: 0 3px #6f9000
+    color: white
+
+    font-size: 18px
+    line-height: 43px
+    text-align: center
+    
+    cursor: pointer
+    transition: all 0.5s ease
+    text-decoration: none
+
+.ask__btn:hover
+    background-color: #00bd9d
+    box-shadow: 0 3px #00947d
+    color: white
+
+.ask__btn:active
+    box-shadow: inset 0 3px 10px #000
+
+@media screen and (max-width: 850px)
+    .ask__btn
+        width: 104px
+        height: 32px
+
+        font-size: 14px
+        line-height: 32px
+        box-shadow: 0 2px #6f9000
+        
+    .ask__btn:hover
+        box-shadow: 0 2px #00947d
+
+    .ask__btn:active
+        box-shadow: inset 0 3px 10px #000
+
+// --------------------------------------------------------------------------------------------
+// -----------------------P-O-R-T-F-O-L-I-O
+// --------------------------------------------------------------------------------------------
+
+.portfolio
+    width: 100%
+    background: $bg_section
+
+.portfolio__title
+    @extend .services__title
+    padding-bottom: 2%
+
+.portfolio__nav
+    text-align: center
+    margin-bottom: 44 / 940 * 100%
+
+.portfolio__nav__li
+    display: inline-block
+
+.portfolio__nav__item
+    display: inline-block
+
+    width: 104px
+    height: 32px
+
+    border: none
+
+    font-size: 14px
+    line-height: 32px
+    text-decoration: none
+    text-decoration: none
+    text-align: center
+
+    color: $text_dark
+    background-color: $bg_item_dark
+
+    transition: all 0.5s ease
+    cursor: pointer
+
+.portfolio__nav__item:hover
+    @extend .ask__btn:hover
+
+.portfolio__photo
+    margin: -7px
+    
+    font-size: 0
+    text-align: center
+    
+.portfolio__photo__item
+    position: relative
+    display: inline-block
+
+    margin: 7px
+
+    max-width: 224px
+
+.portfolio__photo__item__img
+    width: 224px
+    height: 224px
+    
+    cursor: pointer
+
+.portfolio__photo__item__hover
+    position: absolute
+    top: 25px
+    left: 25px
+    right: 25px
+    bottom: 25px
+    
+    opacity: 0
+    background-color: #212121
+    transition: all 0.5s ease
+
+    color: white
+    text-align: center
+    cursor: pointer
+
+.portfolio__photo__item__img:hover + .portfolio__photo__item__hover, .portfolio__photo__item__hover:hover
+    opacity: 0.9
+
+.portfolio__photo__item__hover__title
+    margin-top: 44px
+
+    font-size: 18px
+    font-weight: 500
+    line-height: 20px
+
+.portfolio__photo__item__hover__text
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+
+.portfolio__photo__item__hover__social
+    display: inline-block
+
+    margin: 28px 10px 0 0
+    
+    font-size: 14px
+
+.portfolio__photo__item__hover__social:last-child
+    margin-right: 0
+
+.portfolio__load
+    padding-bottom: 49 / 940 * 100%
+    margin-top: 37 / 940 * 100%
+    text-align: center
+
+.portfolio__btn
+    border: none
+    outline: none
+    
+    background: $bg_section
+    color: $text_dark
+    font-size: 16px
+    font-weight: 300
+    cursor: pointer
+    transition: all 0.5s ease
+
+.portfolio__btn:hover
+    color: #aaca29
+
+.portfolio__arrow
+    display: block
+
+    margin: 15 / 940 * 100% auto 0
+
+@media screen and (max-width: 493px)
+    .portfolio__nav__item
+        width: 79px
+        font-size: 13px
+
+// --------------------------------------------------------------------------------------------
+// -----------------------P-R-I-C-E--T-I-T-L-E
+// --------------------------------------------------------------------------------------------
+
+.pricetitle
+    @extend .ask
+
+.pricetitle__title
+    @extend .slider__title
+    
+.pricetitle__text
+   @extend .slider__text
+
+// --------------------------------------------------------------------------------------------
+// -----------------------P-R-I-C-E
+// --------------------------------------------------------------------------------------------
+
+.price
+    @extend .portfolio
+    text-align: center
+
+.price__title
+    @extend .services__title
+
+.price__lin1
+    margin: 0 -37.25px
+
+    font-size: 0
+
+.price__lin1__item
+    display: inline-block
+
+    width : 263px
+
+    border-radius: 5px
+
+    margin: 0 37.25px 67 / 940 * 100%
+
+    background: $bg_item_dark
+
+.price__lin1__item--white
+    background: $bg_item_light
+
+    .price__lin1__item__title
+        color: $text_light2
+
+    .price__lin1__item__pricetag
+        color: white
+
+.price__lin1__item__title
+    color: $text_dark2
+    font-size: 20px
+    font-weight: 300
+    line-height: 44px
+
+.price__lin1__item__pricetag
+    @extend .ask__btn:hover
+    @extend .price__lin1__item__title
+    color: white
+    font-weight: 700
+
+.price__lin1__item__btn
+    @extend .ask__btn
+    margin-bottom: 17px
+
+.price__lin1__item__text
+    @extend .price__lin1__item__title
+    font-size: 16px
+    font-weight: 700
+
+.price__lin1__item__text--nobold
+    font-weight: 300
+
+.price__line2
+    @extend .price__lin1
+    margin: 0 -21.1666px
+
+.price__lin2__item
+    @extend .price__lin1__item
+
+    width: 203px
+
+    margin: 0 21.1666px 74 / 940 * 100%
+
+    background-color: #f4f4f4
+
+.price__lin2__item__title
+    @extend .price__lin1__item__title
+    color: #5c5c5c
+
+.price__lin2__item__pricetag
+    @extend .price__lin2__item__title
+    color: white
+    font-weight: 700
+
+.price__lin2__item__pricetag--1
+    background: #404040
+    box-shadow: 0 3px #292929
+
+.price__lin2__item__pricetag--2
+    background: #4bb2a5
+    box-shadow: 0 3px #30867b
+
+.price__lin2__item__pricetag--3
+    background: #b2c47d
+    box-shadow: 0 3px #8b9962
+
+.price__lin2__item__pricetag--4
+    background: #e5e5e5
+    box-shadow: 0 3px #a9a9a9
+    color: #74b0a4
+
+.price__lin2__item__text
+    @extend .price__lin1__item__text
+    color: #5c5c5c
+
+.price__lin2__item__btn
+    @extend .price__lin1__item__btn
+
+.price__lin2__item__btn--1
+    @extend .price__lin2__item__pricetag--4
+    color: #424242
+
+.price__lin2__item__btn--2
+    @extend .price__lin2__item__pricetag--2
+
+.price__lin2__item__btn--3
+    @extend .price__lin2__item__pricetag--3
+
+.price__lin2__item__btn--4
+    @extend .price__lin2__item__pricetag--1
+
+.price__footer__title
+    padding-bottom: 50 / 940 * 100%
+
+    text-align: center
+    font-size: 0
+
+.price__footer__line
+    display: inline-block
+
+    width: 341 / 940 * 100%
+    height: 2px
+
+    background-color: $bg_item_dark
+
+.price__footer__item
+    display: inline-block
+
+    width: 243 / 940 * 100%
+
+    padding: 0 7 / 940 * 100%
+
+    color: $bg_item_light
+    font-size: 18px
+    font-weight: 500
+    text-transform: uppercase
+    vertical-align: middle
+
+.price__footer__text
+    position: relative
+    display: inline-block
+
+    width: 396 / 940 * 100%
+    
+    margin: 0 auto
+
+    font-family: Arial
+    font-size: 13px
+    color: #717171
+    font-weight: 400
+    line-height: 25px
+
+.price__footer__text::after
+    position: absolute
+    top: 55%
+    left: 110%
+
+    content: '”'
+    color: $bg_item_dark
+    font-family: Arial
+    font-size: 300px
+
+.price__footer__text::before
+    position: absolute
+    top: 55%
+    right: 110%
+
+    content: '“'
+    color: $bg_item_dark
+    font-family: Arial
+    font-size: 300px
+
+.price__footer__text--green
+    display: block
+
+    padding: 3% 0 68 / 940 * 100%
+
+    color: #b0cd3b
+    font-weight: 700
+
+@media screen and (max-width: 600px)
+    .price__footer__text
+        width: 100%
+
+    .price__footer__text::after, .price__footer__text::before
+        display: none
+
+// --------------------------------------------------------------------------------------------
+// -----------------------T-E-A-M
+// --------------------------------------------------------------------------------------------
+
+.team
+    @extend .ask
+    
+.team__title
+    @extend .slider__title
+    
+.team__text
+   @extend .slider__text
+
+// --------------------------------------------------------------------------------------------
+// -----------------------A-B-O-U-T
+// --------------------------------------------------------------------------------------------
+
+.about
+    @extend .price
+    font-size: 0
+    padding-bottom: 80 / 1200 * 100%
+
+.about__title
+    @extend .services__title
+    
+.about__photo
+    margin: 0 -7.5px
+    
+.about__photo__item
+    display: inline-block
+
+    width: 223px
+
+    margin: 0 7.5px 100 / 940 * 100%
+
+.about__photo__item__title
+    padding: 29 / 223 * 100% 0 0 0
+
+    color: $text_dark
+    font-size: 20px
+    font-weight: 500
+    line-height: 20px
+
+.about__photo__item__profession
+    font-size: 16px
+    font-weight: 300
+    color: $text_dark2
+
+.about__photo__item__text
+    padding: 5% 0 0 0
+
+    font-size: 13px
+    color: $text_dark2
+    line-height: 20px
+    font-weight: 400
+
+.about__photo__footer__title
+    @extend .price__footer__title
+
+.about__photo__footer__line
+    @extend .price__footer__line
+
+.about__photo__footer__item
+    @extend .price__footer__item
+
+.about__photo__skills
+    margin: 0 -22.5px
+
+.about__photo__skills__item
+    display: inline-block
+    
+    width: 145px
+
+    margin: 0 22.5px
+
+.about__photo__skills__item__title
+    margin-top: -20px
+
+    color: $text_dark
+    font-size: 24px
+    font-weight: 700
+    text-align: center
+
+.about__photo__skills__item__text
+    padding: 10px 0 80 / 940 * 100%
+
+    color: $text_dark
+    text-transform: uppercase
+
+    font-size: 13px
+    font-weight: 500
+
+// --------------------------------------------------------------------------------------------
+// -----------------------O-V-E-R
+// --------------------------------------------------------------------------------------------
+
+.over
+    @extend .ask
+
+.over__title
+    @extend .slider__title
+    font-weight: 500
+
+.over__text
+    @extend .slider__text
+    font-weight: 300
+
+// --------------------------------------------------------------------------------------------
+// -----------------------C-O-N-T-A-C-T
+// --------------------------------------------------------------------------------------------
+
+.contact
+    @extend .portfolio
+    font-size: 0
+    padding-bottom: 100px
+
+.contact__container
+    margin: 0 -22px
+    text-align: center
+
+.contact__title
+    @extend .services__title
+
+.contact__form__title
+    padding-bottom: 11px
+
+    border-bottom: 2px solid #747474
+
+    margin-bottom: 17px
+
+    color: $text_dark
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: left
+    
+.contact__form
+    position: relative
+    display: inline-block
+    
+    width: 671px
+    height: 298px
+
+    margin: 0 22px
+
+    font-size: 0
+    vertical-align: top
+
+.contact__input
+    width: 327 / 671 * 100%
+
+    margin-bottom: 19px
+    padding: 12px
+    box-sizing: border-box
+
+    border: none
+    outline: none
+
+    background-color: $bg_footer_dark
+    color: $text_dark2
+    font-family: Arial
+
+.contact__input:first-child
+    margin-right: 17 / 671 * 100%
+
+.contact__textarea
+    @extend .contact__input
+    width: 100%
+    height: 141px
+
+.contact__form__btn
+    @extend .ask__btn
+    position: absolute
+    bottom: 0
+    left: 0
+
+    width: 104px
+    height: 32px
+
+    border-radius: 0
+
+    font-size: 14px
+    line-height: 32px
+
+.contact__info
+    position: relative
+    display: inline-block
+
+    width: 225px
+    height: 298px
+    
+    margin: 0 22px
+
+    font-size: 16px
+    color: $text_dark2
+    font-weight: bold
+    text-align: left
+
+.contact__info__title
+    @extend .contact__form__title
+
+.contact__info__list1
+    margin-bottom: 20px
+
+.contact__info__text
+    line-height: 30px
+
+.contact__info__nobold
+    font-weight: 100
+
+.contact__info__btn
+    @extend .contact__form__btn
+    font-weight: 300
+    
+@media screen and (max-width: 1004px)
+    .contact
+        padding-bottom: 0
+
+    .contact__container
+        margin: 0
+
+    .contact__form
+        width: 100%
+        margin: 0
+        max-width: 671px
+
+    .contact__info
+        width: 100%
+        max-width: 671px
+
+        margin: 40px 0
+        height: 150px
+        
+
+    .contact__info__text
+        display: inline-block
+        line-height: 0px
+        padding-right: 10px
+
+@media screen and (max-width: 480px)
+    .contact__form
+        height: 356px
+
+    .contact__input
+        width: 100%
+
+    .contact__info
+        height: 170px
+
+// --------------------------------------------------------------------------------------------
+// -----------------------S-O-C-I-A-L
+// --------------------------------------------------------------------------------------------
+
+.social
+    @extend .ask
+    padding: 13.5% 0
+
+.social__title
+    @extend .over__title
+
+.social__text
+    @extend .over__text
+
+.social__ico
+    width: 36px
+    height: 36px
+    
+    margin: 25px 10px 0 0
+    border-radius: 100%
+    border: 6px solid $bg_brown
+
+    color: $bg_brown
+    background: $bg_footer_dark
+    text-align: center
+    cursor: pointer
+
+.social__ico:hover
+    background: #a4ce21
+    color: $bg_brown
+    border: 6px solid $bg_section
+
+.fa-github-alt::before,
+.fa-flickr::before,
+.fa-vimeo::before,
+.fa-twitter::before,
+.fa-facebook::before,
+.fa-google-plus::before,
+.fa-pinterest::before,
+.fa-tumblr::before
+    margin-top: 10px
+    display: inline-block
+    
+@media screen and (max-width: 557px)
+    .social__ico
+        width: 25px
+        height: 25px
+
+        border: 4px solid $bg_brown
+
+        margin-right: 4px
+
+    .social__ico:hover
+        border: 4px solid $bg_section
+
+    .fa-github-alt::before,
+    .fa-flickr::before,
+    .fa-vimeo::before,
+    .fa-twitter::before,
+    .fa-facebook::before,
+    .fa-google-plus::before,
+    .fa-pinterest::before,
+    .fa-tumblr::before
+        margin-top: 5px
+
+// --------------------------------------------------------------------------------------------
+// -----------------------R-E-C-E-N-T
+// --------------------------------------------------------------------------------------------
+
+.recent
+    @extend .portfolio
+    font-size: 0
+
+.recent__item
+    display: inline-block
+
+    width: 265px
+
+    margin-right: 72 / 940 * 100%
+
+    color: #747474
+    vertical-align: top
+    line-height: 20px
+    font-size: 0
+    
+.recent__item:last-child
+    margin: 0
+
+.recent__item__title
+    @extend .contact__form__title
+    padding: 72px 0 17px 0
+
+.recent__item__text
+    font-size: 13px
+
+.recent__item__time
+    font-size: 13px
+    line-height: 70px
+
+.recent__item__time::before
+    display: inline-block
+
+    width: 20px
+    height: 16px
+
+    padding-right: 10px
+
+    content: ''
+    background: url(../pic/ico/recent_tw.png) no-repeat
+    vertical-align: middle
+
+.recent__item__time2
+    font-size: 13px
+    line-height: 70px
+
+.recent__item__imgs
+    margin: 0 -4px
+
+.recent__item__img
+    display: inline-block
+    width: 60px
+    margin: 0 4px
+
+@media screen and (max-width: 1004px)
+    .recent__item  
+        width: 48%
+        margin: 0
+
+    .recent__item:first-child
+        margin-right: 4%
+
+    .recent__item:last-child
+        width: 100%
+        text-align: center
+
+    .recent__item__title
+        padding-top: 17px
+        margin-top: 17px
+        
+        border-top: 2px solid #747474
+
+        text-align: center
+
+@media screen and (max-width: 768px)
+    .recent__item  
+        width: 100%
+        margin: 0
+
+    .recent__item__text
+        font-size: 13px
+    
+    .recent__item__time, .recent__item__time2
+        line-height: 40px
+
+// --------------------------------------------------------------------------------------------
+// -----------------------F-O-O-T-E-R
+// --------------------------------------------------------------------------------------------
+
+.footer
+    @extend .head
+    background: $bg_footer_dark
+
+.footer__title
+    @extend .head__title
+    vertical-align: top
+
+.footer__info
+    position: absolute
+    bottom: 0
+    right: 0
+
+.footer__info__item
+    display: inline-block
+
+    padding-left: 10px
+
+    color: $text_dark2
+    font-size: 16px
+    font-weight: 500
+    line-height: 26px
+
+.footer__info__nobold
+    font-weight: 300
+
+@media screen and (max-width: 737px)
+    .footer__info
+        position: static
+
+    .footer__info__item
+        padding: 10px 10px 0 0

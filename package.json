@@ -1,0 +1,26 @@
+{
+  "name": "Project",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-complexity": "^0.3.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-csso": "^1.0.1",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-svgmin": "^1.2.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.6",
+    "imagemin-pngquant": "^4.1.2"
+  },
+  "dependencies": {
+    "imagemin-jpegtran": "^4.1.0",
+    "imagemin-optipng": "^4.2.0",
+    "imagemin-pngquant": "^4.0.0"
+  }
+}
